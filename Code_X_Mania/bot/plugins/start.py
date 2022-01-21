@@ -43,7 +43,7 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>JOIN @iPRIMEHUB CHANNEL TO USE ME 🔐</i>",
+                    text="<i>JOIN @Theonearmy CHANNEL TO USE ME 🔐</i>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -83,7 +83,7 @@ async def start(b, m):
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="**Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Qᴜɪᴄᴋʟʏ ᴄᴏɴᴛᴀᴄᴛ** @codexmaniachat",
+                        text="**Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Qᴜɪᴄᴋʟʏ ᴄᴏɴᴛᴀᴄᴛ** @theonearmybot",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -109,7 +109,7 @@ async def start(b, m):
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ** [ADARSH GOEL](https://t.me/codexmania).",
+                    text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ** [The One](https://t.me/theonearmybot).",
                     parse_mode="markdown",
                     disable_web_page_preview=True)
                 return
@@ -164,7 +164,7 @@ async def start(b, m):
         )
 
 
-@StreamBot.on_message(filters.command('help') & filters.private & ~filters.edited)
+@Theonestream.on_message(filters.command('help') & filters.private & ~filters.edited)
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
@@ -200,7 +200,7 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ ADARSH GOEL](https://t.me/codexmania).",
+                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ Theone](https://t.me/theonearmybot).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -211,7 +211,7 @@ async def help_handler(bot, message):
             
           reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("😇Donate", url="https://paypal.me/rahulrahaman")]
+                [InlineKeyboardButton("😇Donate", url="https://paypal.me/amoltheone")]
             ]
         )
     )
