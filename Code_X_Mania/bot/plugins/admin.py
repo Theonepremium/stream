@@ -1,4 +1,4 @@
-# (c) @code-x-mania
+# (c) @Theonearmy
 import os
 import time
 import string
